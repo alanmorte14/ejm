@@ -394,9 +394,10 @@ h6,
 
 #hero .btn-get-started:hover {
   background: var(--text-color);
-  color: var(--main-green);
+  color: var(--section-bg);
   font-weight: bold;
   box-shadow: 1px 1px 5px var(--sec-green); 
+  transform: scale(1.05);
 }
 
 #hero .animated {
@@ -656,7 +657,7 @@ width: 526px;
 
 .services .icon-box:hover {
   transform: translateY(-5px);
-  border-color: var(--main-green);
+  border-color: var(--main-black);
 }
 
 .services .icon i {
