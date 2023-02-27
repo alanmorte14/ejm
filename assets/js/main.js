@@ -224,41 +224,8 @@
     }
   });
 
-  /**
-   * Parceiros Slider
-   */
-  new Swiper('.parceiros-slider', {
-    speed: 400,
-    loop: true,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    slidesPerView: 'auto',
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
-    },
-    breakpoints: {
-      320: {
-        slidesPerView: 1,
-        spaceBetween: 40
-      },
-      480: {
-        slidesPerView: 1,
-        spaceBetween: 60
-      },
-      640: {
-        slidesPerView: 1,
-        spaceBetween: 80
-      },
-      992: {
-        slidesPerView: 1,
-        spaceBetween: 120
-      }
-    }
-  });
+
+
 
 
 
@@ -275,3 +242,54 @@
   });
 
 })()
+
+
+
+  /**
+   * Parceiros Slider
+   */
+let sliderSwiper = new Swiper('.parceiros-slider', {
+  speed: 400,
+  loop: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  slidesPerView: 'auto',
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'bullets',
+    clickable: true
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 40
+    },
+    480: {
+      slidesPerView: 1,
+      spaceBetween: 60
+    },
+    640: {
+      slidesPerView: 1,
+      spaceBetween: 80
+    },
+    992: {
+      slidesPerView: 1,
+      spaceBetween: 120
+    }
+  }
+});
+
+var sliderVideos = document.querySelectorAll(".responsive-iframe");
+var sliderIndex = 0;
+
+sliderSwiper.on('slideChange', function () {
+    myCallbackfunction(this);
+    var iframeSrc = sliderVideos[sliderIndex].src;
+		sliderVideos[sliderIndex].src = iframeSrc;
+});
+
+function myCallbackfunction(data){
+  sliderIndex = data.realIndex
+}
