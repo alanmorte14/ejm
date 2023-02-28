@@ -1129,10 +1129,18 @@ width: 526px;
 }
 
 
-.swiper-button-next, .swiper-button-prev{
-  padding: 15px;
-  color:var(--sec-green)
+
+.swiper-button-next,
+.swiper-button-prev {
+    background-color: white;
+    background-color: rgba(255, 255, 255, 0.5);
+    right:10px;
+    padding: 30px;
+    color: #000 !important;
+    fill: black !important;
+    stroke: black !important;
 }
+
 
 .iframe-div {
   position: relative;
@@ -1150,4 +1158,47 @@ width: 526px;
   right: 0;
   width: 100%;
   height: 100%;
+}
+
+.img-history{
+  border-radius: 25px;
+  width: 275px;
+  margin:0 0 25px 0;
+}
+
+.title-history p{
+ color:var(--main-black);
+ margin-top:50px;
+ font-family: 'Shantell Sans', cursive;
+ font-size: 70px;
+}
+
+
+#historia .description{
+  text-align: justify;
+}
+
+.button-youtube{
+  background: var(--main-green);;
+  border: 0;
+  padding: 10px 24px;
+  color: #fff;
+  border-radius: 4px;
+  margin-bottom: -50px;
+  font-size:28px;
+  transition: all 0.5s ease;
+}
+
+.button-youtube:hover{
+  transition: all 0.5s ease;
+  background: var(--text-color);
+  color: var(--main-green);
+  box-shadow: 1px 1px 5px var(--sec-green); 
+}
+
+.button-youtube:hover a {
+  color:var(--main-green)
+}
+.button-youtube  a{
+  color: #f4f4f4
 }
